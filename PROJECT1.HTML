@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mysite.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,200;1,300&family=Montserrat:ital,wght@0,400;1,100;1,300&family=Nunito:wght@500&family=Roboto&family=Young+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .container{
+            margin: auto;
+            width: 75vw;
+            max-height: 250vh;
+            border: 1px solid black;
+             font-family: 'Roboto', sans-serif;
+
+        }
+        .holder{
+            width: 95%;
+            height: 95%;
+            display: grid;
+            grid-template-columns: 33.33% 33.33% 33.33%;
+            grid-template-rows: 40% 30% 30% ;
+            box-sizing: border-box;
+            padding-top: 20px;
+            margin: auto;
+            /* overflow: auto; */
+        }
+        .c{
+            /* border: 1px solid black; */
+            box-sizing: border-box;
+        }
+        .c1{
+            grid-area: 1/1/2/2;
+            
+        }
+        .c2{
+            grid-area: 1/2/4/4;
+        }
+        .c3{
+            grid-area: 2/1/4/2;
+        }
+
+        .title{
+            background-color: rgb(8, 84, 250);
+            width: 100%;
+            height: 100%;
+        }
+        .image img{
+            margin: auto;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            
+        }
+        .title .image{
+            padding-top: 15px;
+            width: 80%;
+            height: 50%;
+            margin: auto;
+        }
+        .image:hover{
+            transform: scale(1.2);
+        }
+        .title .name{
+            color: white;
+            margin: auto;
+            margin-top: 15px;
+            width: 80%;
+            
+            text-align: center;
+        }
+        .name h2{
+            /* font-size: 100%; */
+            
+            margin-top: 20px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 2rem;
+        }
+        .title .title1{
+            margin: auto;
+            width: 80%;
+            
+        }
+        .title1 h3{
+            color: white;
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: 'Roboto', sans-serif;
+        }
+        .title .font{
+            text-align: center;
+            width: 100%;
+            height: auto;
+        }
+        .font h3{
+            display: inline;
+            color: black;
+        }
+        .font {
+            display: flex;
+            flex-direction: row;
+            font-size: 1.5rem;
+            justify-content: center;
+            gap: 20px;
+        }
+        .font a{
+            text-decoration: none;
+        }
+        .font :hover{
+            color: yellow;
+        }
+        
+        @media (max-width:576px){
+
+            .container{
+                width: 95vw;
+                max-height: 1000vh;
+            }
+            .holder{
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-rows: repeat(12, 1fr);
+            }
+            .c1{
+                grid-area: 1/1/3/13;
+            }
+            .c2{
+                grid-area: 3/1/8/13;
+            }
+            .c3{
+                grid-area: 8/1/13/13;
+            }
+            .c2 .projects .name1{
+                width: 80%;
+            }
+            .c1 .font{
+                flex-direction: column;
+            }
+            .c2 .exp1{
+                margin-top: 50px!important;
+
+            }
+            .exp1 .headline{
+                height: auto;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:912px) {
+            .container{
+                max-height: 1000vh;
+            }
+            .title .image{
+                text-align: center;
+                padding-top: 0px;
+                width: 75%;
+            }
+            
+            .c1 .title .image img{
+                width: 100%;
+                height: 75%;
+                margin-top: 20px; 
+
+            }
+            .holder{
+                grid-template-rows: 30% 30% 40%;
+            }
+            .c1 .title .name{
+                margin-top: 0px;
+                font-size: 1rem;
+            }
+            .name h2{
+                font-size: 1rem;
+            }
+            .c1 .font{
+                flex-direction: column;
+                font-size: 1rem;
+            }
+        }
+        @media (min-width:912px) and (max-width:1200px) {
+            
+            .title .image{
+                width: 85%;
+                height: 50%;
+            }
+            .c1 .title .image img{
+                width: 100%;
+                height: 75%;
+            }
+            .font{
+                font-size: 1.2rem;
+            }
+
+        }
+        .c2 .info{
+            width: 95%;
+            height: 100%;
+            /* border: 1px solid black; */
+            margin-left: 5%;
+            /* overflow: auto; */
+        }
+        .info p{
+            color: gray;
+            line-height: 1.5;
+            max-width: 100%;
+            font-size: 1.2rem;
+            
+        }
+        .info h2{
+            color: rgb(8, 84, 250);
+            font-size: 2rem;
+            margin: 0px;
+        }
+        /* .info .headline{
+            height: 50px;
+        } */
+        .info h3{
+            font-size: 1.5rem;
+            margin: auto;
+        }
+        .arrow{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: black;
+            text-align: center;
+            margin-top: 20px;
+            
+        }
+        .name1{
+            width: 70%;
+            height: 30px;
+        }
+        .exp2{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            column-gap: 20px;
+        }
+        .years{
+            width: 30%;
+            height: 30px;
+        }
+        .years h3{
+            margin-left: 30px;
+        }
+        .company{
+            width: 50%;
+            height: 30px;
+        }
+        .c2 .name{
+            max-width: 80%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+        }
+        .c2 .name p{
+            max-width: 100%;
+        }
+        .c2 .exp1{
+            margin-top: 10px;
+        }
+        .exp1 .name{
+            margin-top: 15px;
+            row-gap: 5px;
+        }
+        .projects .name{
+            display: flex;
+            flex-direction: column; 
+            row-gap: 5px;
+            margin-top: 10px;
+        }
+        .c2 hr{
+            border: 1.5px solid black;
+        }
+        .c2 .name::before{
+            content: "";
+        }
+        
+        .c3{
+            
+            background-color: rgb(49, 47, 47);
+            color: wheat;
+        }
+        .c3 .contact{
+            width: 90%;
+            height: auto;
+            margin: auto;
+            font-family: 'Roboto', sans-serif;
+        }
+        .contact .heading{
+            width: 90%;
+            margin: auto;
+            font-size: 1.4rem;
+        }
+        .contact .contact1{
+            margin-top: 20px;
+            margin-left: 20px;
+            font-size: 1rem;
+            width: 80%;
+            
+        }
+        .contact1 .number{
+            font-size: 2rem;
+            
+            color: rgb(129, 124, 124);
+        }
+        .contact hr{
+            border: 1px solid white;
+        }
+        .contact1 h3 {
+            margin: 0px;
+        }
+        .contact1 p{
+            font-size: 1rem;
+            color: rgb(129, 126, 126) ;
+            margin-top: 5px;
+        }
+        .heading h2{
+            margin-bottom: 0px;
+        }
+        .percent{
+            margin-top: 15px;
+            width: 80%;
+            height: 30px;
+            display: flex;
+            flex-direction: row;
+            
+        }
+        .percent .percent1{
+            width: 80%;
+            height: 5px;
+            background-color: rgba(0, 0, 255, 0.719);
+        }
+        .percent .percent2{
+            width: 20%;
+            height: 5px;
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="holder">
+            <div class="c c1">
+                <div class="title">
+                    <div class="image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZl3u5pd-RqPyXRaY-oV0acq4aqbW65NKAnw&usqp=CAU" alt="">
+                    </div>
+                    <div class="name"><h2>DEEPANSHU <br> KAUSHIK</h2>
+                    </div>
+                    <div class="title1"><h3>WEB DEVELOPER</h3></div>
+                    <div class="font">
+                        <div>
+                            <i class="bi bi-github"><a href="http://www.google.com" target="_blank" rel="noopener noreferrer"><h3>githubid</h3></a></i>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-linkedin fa-xl"></i>
+                            <a href="http://" target="_blank" rel="noopener noreferrer"><h3>linkedinid</h3></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c c2">
+                    <div class="info">
+                        <div class="obj">
+                            <h2>OBJECTIVE</h2><hr>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae sint voluptatum labore quaerat harum totam veniam eum ea ex, omnis impedit quod sed autem sequi animi nemo nesciunt neque maxime? Perspiciatis ipsum consequuntur consequatur non.</p>
+                        </div>
+                        <div class="exp">
+                            <div class="headline">
+                                <h2>WORK EXPERIENCE-n YEARS</h2><hr>
+                            </div>
+
+                            <div class="exp1">
+                                <div class="exp2">
+                                    <div class="arrow"><i class="fa-solid fa-arrow-right" style="color: #f5f9ff;"></i></div>
+                                    <div class="name">
+                                    <div class="name1"><h3>Role Name 1</h3></div>
+                                    <div class="years"><h3>FROM-TO</h3></div>
+                                    <div class="company"><h3>Company Name 1</h3></div>
+                                    <div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias accusantium neque necessitatibus dolor cum itaque animi inventore perferendis facilis ipsum.</p>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="exp2">
+                                    <div class="arrow"><i class="fa-solid fa-arrow-right" style="color: #f5f9ff;"></i></div>
+                                    <div class="name">
+                                    <div class="name1"><h3>Role Name 2</h3></div>
+                                    <div class="years"><h3>FROM-TO</h3></div>
+                                    <div class="company"><h3>Company Name 2</h3></div>
+                                    <div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias accusantium neque necessitatibus dolor cum itaque animi inventore perferendis facilis ipsum.</p>
+                                    </div>    
+                                </div>
+                                </div>
+                                <div class="exp2">
+                                    <div class="arrow"><i class="fa-solid fa-arrow-right" style="color: #f5f9ff;"></i></div>
+                                    <div class="name">
+                                    <div class="name1"><h3>Role Name 3</h3></div>
+                                    <div class="years"><h3>FROM-TO</h3></div>
+                                    <div class="company"><h3>Company Name 3</h3></div>
+                                    <div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias accusantium neque necessitatibus dolor cum itaque animi inventore perferendis facilis ipsum.</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects">
+                            <div class="headline">
+                                <h2>PROJECTS</h2><hr>
+                            </div>
+                            <div class="exp2">
+                                <div class="arrow"><i class="fa-solid fa-arrow-right" style="color: #f5f9ff;"></i></div>
+                                <div class="name">
+                                <div class="name1"><h3>Project Name 1</h3></div>
+                                <div class="course"><h3>TECH STACK</h3></div>
+                                <div>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim soluta architecto nobis expedita consectetur voluptatibus dolorum quaerat nostrum iusto provident.</p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="exp2">
+                                <div class="arrow"><i class="fa-solid fa-arrow-right" style="color: #f5f9ff;"></i></div>
+                                <div class="name">
+                                <div class="name1"><h3>Project Name 2</h3></div>
+                                <div class="course"><h3>TECH STACK</h3></div>
+                                <div>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim soluta architecto nobis expedita consectetur voluptatibus dolorum quaerat nostrum iusto provident.</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="c c3">
+                <div class="details">
+                    <div class="contact">
+                        <div class="heading"><h2>Contact</h2></div><hr>
+                        <div class="contact1">
+                            <div class="phone"><h3>Phone</h3></div>
+                            <div class="number">*********</div>
+                            <div class="email">
+                                <div><h3>Email</h3></div>
+                                <div><p>kaushikdeepanshu2003@gmail.com</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <div class="heading"><h2>Skills</h2></div><hr>
+                        <div class="contact1">
+                            <div class="skill"><h3>Skill 1</h3></div>
+                            <div class="percent">
+                                <div class="percent1"></div>
+                                <div class="percent2"></div>
+                            </div>
+                            <div class="skill"><h3>Skill 2</h3></div>
+                            <div class="percent">
+                                <div class="percent1"></div>
+                                <div class="percent2"></div>
+                            </div>
+                            <div class="skill"><h3>Skill 3</h3></div>
+                            <div class="percent">
+                                <div class="percent1"></div>
+                                <div class="percent2"></div>
+                            </div>
+                            <div class="skill"><h3>Skill 4</h3></div>
+                            <div class="percent">
+                                <div class="percent1"></div>
+                                <div class="percent2"></div>
+                            </div>
+                            <div class="skill"><h3>Skill 5</h3></div>
+                            <div class="percent">
+                                <div class="percent1"></div>
+                                <div class="percent2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <div class="heading"><h2>Certificates</h2></div><hr>
+                        <div class="contact1">
+                            <div class="phone"><h3>Certificate Name 1</h3></div>
+                            <div class="phone"><h3>Certificate Name 2</h3></div>
+                            <div class="phone"><h3>Certificate Name 3</h3></div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
